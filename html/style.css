@@ -1,0 +1,33 @@
+.container {
+    width: 800px;
+    background-color: aliceblue;
+    margin: 20px;
+}
+.header, .content, .contact {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.linkedin {
+    text-align: right;
+    margin: 20px;
+}
+.photo, .nom {
+    margin : 10;
+
+}
+.fiche{
+    width: 450px ;
+}
+.email, .bureau {
+    display: flex;
+    width: 130px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+.footer
+{
+    text-align: center;
+    margin: 10px;
+}
