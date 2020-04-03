@@ -2,6 +2,11 @@
 from string import Template
 import xlrd
 
+f = open("./html/annuaire.html", "w",  encoding='utf8')
+annuaire = "<h1>Annuaire</h1>\n" 
+f.write(annuaire)
+f.close()
+
 book = xlrd.open_workbook('pages.xlsx', encoding_override="utf8")
 sheet=book.sheet_by_index(0)
 
@@ -35,6 +40,10 @@ for i in range (2,num_rows-1) :
         f.close()
         result = src.substitute(d)
 
+        f = open("./html/annuaire.html", "a",  encoding='utf8')
+        annuaire = "<a href='https://www.ecam.be/wp-content/uploads/2020/04/" + d['trigramme'] + ".html' >" + d['prenom'] + " " + d['nom'] + "</a>\n" 
+        f.write(annuaire)
+        f.close()
 
         f = open("./html/" + d['trigramme'] + ".html", "w",  encoding='utf8')
         f.write(result)
