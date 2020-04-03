@@ -41,7 +41,7 @@ for i in range (2,num_rows-1) :
         result = src.substitute(d)
 
         f = open("./html/annuaire.html", "a",  encoding='utf8')
-        annuaire = "<a href='https://www.ecam.be/wp-content/uploads/2020/04/" + d['trigramme'] + ".html' >" + d['prenom'] + " " + d['nom'] + "</a>\n" 
+        annuaire = "<a href='https://www.ecam.be/annuaire/" + d['trigramme'] + ".html' >" + d['prenom'] + " " + d['nom'] + "</a>\n" 
         f.write(annuaire)
         f.close()
 
